@@ -1,0 +1,19 @@
+def store_transaction(company_name, transaction_type, amount, date):
+    """
+    A function that stores details of a company transaction.
+
+    Parameters:
+    company_name (str): The name of the company.
+    transaction_type (str): The type of transaction (e.g., sale, purchase).
+    amount (float): The amount of the transaction.
+    date (str): The date of the transaction in YYYY-MM-DD format.
+
+    Returns:
+    None
+    """
+
+    # Open the file for appending
+    with open('transactions.csv', 'a') as file:
+
+        # Write the transaction details to the file as a new row
+        file.write(f"{company_name},{transaction_type},{amount},{date}\n")
